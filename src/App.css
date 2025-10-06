@@ -11,70 +11,84 @@ body {
     overflow-x: hidden;
 }
 
+:root {
+  --nav-height: 90px; /* adjust if your nav is taller/shorter */
+}
+
 /* Navigation */
 nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(10, 10, 10, 0.8);
-    backdrop-filter: blur(20px);
-    padding: 1.5rem 5%;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--nav-height);
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(20px);
+  padding: 1.5rem 5%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: 900;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    letter-spacing: 2px;
+  font-size: 1.8rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 2px;
 }
 
 .nav-links {
-    display: flex;
-    gap: 3rem;
-    list-style: none;
+  display: flex;
+  gap: 3rem;
+  list-style: none;
 }
 
 .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    position: relative;
-    transition: color 0.3s;
-    cursor: pointer;
-    letter-spacing: 0.5px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  transition: color 0.3s;
+  cursor: pointer;
+  letter-spacing: 0.5px;
 }
 
 .nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #667eea, #764ba2);
-    transition: width 0.3s;
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 0.3s;
 }
 
 .nav-links a:hover {
-    color: #667eea;
+  color: #667eea;
 }
 
 .nav-links a:hover::after {
-    width: 100%;
+  width: 100%;
+}
+
+/* Global fix so content starts below navbar */
+body {
+  margin: 0;
+  padding-top: var(--nav-height);
+  background: #111; /* dark theme background */
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 /* Hero Section */

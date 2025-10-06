@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   useEffect(() => {
@@ -53,9 +54,9 @@ const HeroSection = () => {
         <h1>AMPLIFY YOUR PASSION</h1>
         <p className="subtitle">Premium instruments for artists who dare to dream bigger</p>
         <div className="cta-group">
-          <button className="cta-button cta-primary" onClick={() => alert('Coming soon!')}>
+          <Link to="/instruments" className="cta-button cta-primary">
             EXPLORE COLLECTION
-          </button>
+          </Link>
         </div>
       </div>
     </section>

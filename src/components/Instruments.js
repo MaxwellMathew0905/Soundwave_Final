@@ -1,72 +1,52 @@
-import React from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import instruments from "../data/InstrumentsData";
+import "./Instruments.css";
 
-const categories = [
-  {
-    id: 1,
-    name: 'Tabla',
-    slug: 'tabla',
-    image: '/tabla.jpg'
-  },
-  {
-    id: 2,
-    name: 'Sitar',
-    slug: 'sitar',
-    image: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    id: 3,
-    name: 'Harmonium',
-    slug: 'harmonium',
-    image: 'https://images.unsplash.com/photo-1454923634634-bd1614719a7b?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    id: 4,
-    name: 'Bansuri',
-    slug: 'bansuri',
-    image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    id: 5,
-    name: 'Veena',
-    slug: 'veena',
-    image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    id: 6,
-    name: 'Flute',
-    slug: 'flute',
-    image: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80',
-  },
-];
+function Instruments() {
+  const navigate = useNavigate();
 
-function Instruments({ onSelectCategory = () => {} }) {
   return (
-    <div className="instruments-dark-page">
-      <div className="instruments-header">
-        <h2>Our Instrument Collection</h2>
-        <p>
-          Discover our handpicked selection of world-class musical instruments. Every piece is chosen for its beauty, sound, and craftsmanship.
-        </p>
-      </div>
-      <div className="instruments-dark-grid">
-        {categories.map(category => (
-          <div
-            key={category.id}
-            className="instrument-dark-card"
-            onClick={() => onSelectCategory(category.slug)}
-          >
-            <div className="instrument-dark-image-wrapper">
-              <img
-                src={category.image}
-                alt={category.name}
-                className="instrument-dark-image"
-                loading="lazy"
-              />
-              <div className="instrument-dark-title">{category.name}</div>
+    <div className="instruments-page">
+      <div className="instruments-container">
+        <div className="page-header">
+          <h1 className="page-title">
+            <span className="title-gradient">Our Instruments</span>
+          </h1>
+          <p className="page-subtitle">Discover the perfect sound for your musical journey</p>
+        </div>
+        
+        <div className="instruments-grid">
+          {instruments.map((item, index) => (
+            <div 
+              className="instrument-card" 
+              key={item.id}
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className="card-gradient-border">
+                <div className="card-content">
+                  <div className="image-container">
+                    <img src={item.image} alt={item.name} className="instrument-image" />
+                    <div className="image-overlay"></div>
+                  </div>
+                  
+                  <div className="card-info">
+                    <h2 className="instrument-name">{item.name}</h2>
+                    <button
+                      className="explore-btn"
+                      onClick={() => navigate(`/instrument/${item.id}`)}
+                    >
+                      <span>Explore</span>
+                      <svg className="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 3L13 8L8 13M13 8H3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <button className="instrument-dark-button">View Collection</button>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
