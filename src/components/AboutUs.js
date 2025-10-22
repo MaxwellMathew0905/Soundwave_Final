@@ -68,37 +68,37 @@ function AboutUs() {
   return (
     <div className="about-page">
       <div className="about-container">
-        <div className="page-header">
-          <h1 className="page-title">
-            <span className="title-gradient">Meet Our Team</span>
+        <div className="about-page-header">
+          <h1 className="about-page-title">
+            <span className="about-title-gradient">Meet Our Team</span>
           </h1>
-          <p className="page-subtitle">
+          <p className="about-page-subtitle">
             The passionate people behind <strong>SOUNDWAVE</strong>
           </p>
         </div>
 
-        <div className="team-grid">
+        <div className="about-team-grid">
           {teamMembers.map((member, index) => (
             <div
-              className="team-card"
+              className="about-team-card"
               key={member.id}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="card-gradient-border">
-                <div className="card-content">
-                  <div className="image-container">
+              <div className="about-card-gradient-border">
+                <div className="about-card-content">
+                  <div className="about-image-container">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="team-image"
+                      className="about-team-image"
                     />
-                    <div className="image-overlay"></div>
+                    <div className="about-image-overlay"></div>
                   </div>
-                  <div className="card-info">
-                    <h2 className="team-name">{member.name}</h2>
-                    <p className="team-role">{member.role}</p>
-                    <p className="team-desc">{member.description}</p>
-                    <div className="social-icons">
+                  <div className="about-card-info">
+                    <h2 className="about-team-name">{member.name}</h2>
+                    <p className="about-team-role">{member.role}</p>
+                    <p className="about-team-desc">{member.description}</p>
+                    <div className="about-social-icons">
                       <a href={member.socials.facebook} target="_blank" rel="noreferrer">
                         <i className="fab fa-facebook-f"></i>
                       </a>

@@ -11,22 +11,20 @@ const instruments = [
         id: "s1",
         name: "Sitar Classic",
         price: "$499",
-        image: "/sitar.jpg",
-        demo: "https://www.youtube.com/watch?v=xxxx"
+        image: "/s1.jpg",
+        demo: "https://youtu.be/zVqvd6mhat8?si=XIS9dLmqTAYZltbn"
       },
       {
         id: "s2",
         name: "Sitar Deluxe",
         price: "$699",
-        image: "/sitar.jpg",
-        demo: "https://www.youtube.com/watch?v=xxxx"
+        image: "/s2.jpg",
       },
       {
         id: "s3",
         name: "Sitar Pro",
         price: "$899",
-        image: "/sitar.jpg",
-        demo: "https://www.youtube.com/watch?v=xxxx"
+        image: "/s3.jpg",
       }
     ]
   },
@@ -41,15 +39,20 @@ const instruments = [
         id: "h1",
         name: "Harmonium Standard",
         price: "$799",
-        image: "/harmonium.jpg",
-        demo: "https://www.youtube.com/watch?v=xxxx"
+        image: "/h2.jpg",
+        demo: "https://youtu.be/5yrKO0uPJjA?si=wl9N8eW781QGZg5_"
       },
       {
         id: "h2",
         name: "Harmonium Concert",
         price: "$999",
-        image: "/harmonium.jpg",
-        demo: "https://www.youtube.com/watch?v=xxxx"
+        image: "/h1.jpg",
+      },
+      {
+        id: "h3",
+        name: "Harmonium Pro",
+        price: "$999",
+        image: "/h3.jpg",
       }
     ]
   },
@@ -64,15 +67,20 @@ const instruments = [
         id: "t1",
         name: "Tabla Beginner",
         price: "$299",
-        image: "/tabla1.jpg",
-        demo: "https://www.youtube.com/watch?v=xxxx"
+        image: "/t1.jpg",
+        demo: "https://youtu.be/asx3wwdO178?si=U0N7nYSqBtxCLZur"
       },
       {
         id: "t2",
         name: "Tabla Professional",
         price: "$499",
-        image: "/tabla1.jpg",
-        demo: "https://www.youtube.com/watch?v=xxxx"
+        image: "/t2.jpg",
+      },
+      {
+        id: "t3",
+        name: "Tabla Supreme",
+        price: "$499",
+        image: "/t3.jpg",
       }
     ]
   },
@@ -87,15 +95,20 @@ const instruments = [
         id: "sh1",
         name: "Shenai Classic",
         price: "$199",
-        image: "/shenai.jpg",
-        demo: "https://www.youtube.com/watch?v=xxxx"
+        image: "/sh1.jpg",
+        demo: "https://youtu.be/MWXH4bDkXGQ?si=3TtGdz2XMwPH3Jvp"
       },
       {
         id: "sh2",
         name: "Shenai Premium",
         price: "$299",
-        image: "/shenai.jpg",
-        demo: "https://www.youtube.com/watch?v=xxxx"
+        image: "/sh2.jpg",
+      },
+      {
+        id: "sh3",
+        name: "Shenai Gold",
+        price: "$299",
+        image: "/sh3.jpg",
       }
     ]
   },
@@ -110,15 +123,20 @@ const instruments = [
         id: "sa1",
         name: "Santoor Student",
         price: "$199",
-        image: "/santoor.jpg",
-        demo: "https://www.youtube.com/watch?v=xxxx"
+        image: "/x1.jpg",
+        demo: "https://youtu.be/XNsPEWepUWo?si=L7hD21M0rtLbE5fJ"
       },
       {
         id: "sa2",
         name: "Santoor Concert",
         price: "$399",
-        image: "/santoor.jpg",
-        demo: "https://www.youtube.com/watch?v=xxxx"
+        image: "/x2.jpg",
+      },
+      {
+        id: "sa3",
+        name: "Santoor Student",
+        price: "$399",
+        image: "/x3.jpg",
       }
     ]
   },
@@ -134,14 +152,19 @@ const instruments = [
         name: "Flute Bamboo",
         price: "$199",
         image: "/flute.jpg",
-        demo: "https://www.youtube.com/watch?v=xxxx"
+        demo: "https://youtu.be/bYPmSHjPLBA?si=vaLv5mE6_nVmokBg"
       },
       {
         id: "f2",
         name: "Flute Concert",
         price: "$299",
         image: "/flute.jpg",
-        demo: "https://www.youtube.com/watch?v=xxxx"
+      },
+      {
+        id: "f3",
+        name: "Flute Classic",
+        price: "$299",
+        image: "/flute.jpg",
       }
     ]
   }
